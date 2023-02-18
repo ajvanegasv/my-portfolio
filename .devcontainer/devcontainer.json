@@ -1,0 +1,13 @@
+{
+    "name": "Fresh",
+    "dockerFile": "Dockerfile",
+    
+    "customizations": {
+        "vscode": {
+            "settings": {},
+            "extensions": ["denoland.vscode-deno"]
+        }
+    },
+
+    "remoteUser": "vscode"
+}
