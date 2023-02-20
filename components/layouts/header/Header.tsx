@@ -1,15 +1,17 @@
 import { Head } from "$fresh/runtime.ts";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
 export default function Header() {
   const defaultTitle = "ajvanegasv - Bienvenidos a mi portafolio web";
+  const [title, setTitle] = useState(defaultTitle)
 
-    console.log(window)
-
+  self.addEventListener("visibilitychange", () => {
+    setTitle("¡Regresa por favor! 🙏");
+  });
 
   return (
     <Head>
-      <title>{defaultTitle}</title>
+      <title>{title}</title>
     </Head>
   );
 }
