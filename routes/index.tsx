@@ -1,4 +1,4 @@
-import Main from "../components/layouts/main/Main.tsx";
+import Main from "../components/layouts/Main.tsx";
 
 export default function Home() {
   return (
