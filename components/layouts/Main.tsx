@@ -11,7 +11,7 @@ export default function Main(props: { children: ComponentChildren }) {
     <>
       <Header />
       <div class="bg-pallete-dark p-4 h-screen text-pallete-light font-jetBrains">
-        <BasicDiv class="justify-between">
+        <BasicDiv class="justify-between items-center">
           <BasicDiv>
             <a href="/">
               <BtnBrick>

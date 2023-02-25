@@ -1,9 +1,9 @@
-
+import { tw } from "twind"
 
 export default function BtnMailBox(){  
   return (
-    <a>
-      <img class="object-scale-down h-100 w-100" src="/assets/Mailbox.png" alt="Mailbox" title="Contact me" />
+    <a type="button" title="Contact me">
+      <img class={tw`object-scale-down h-10 w-10`} src="/assets/Mailbox.png" alt="Mailbox"/>
     </a>
   );
 }
