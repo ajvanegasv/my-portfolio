@@ -1,14 +1,16 @@
-import { css, theme } from "twind/css";
+import { animation } from "twind/css";
 
-const writeMachine = css({
-  "&::after": { 
-    content: "''",
-    border: `3px solid #FBF5F3`,
-    height: "3px",
-    display: "inline-block",
-    width: "25px"
+const flicker = animation('0.8s ease infinite', {
+  "0%": {
+    opacity: "1.0"
+  },
+  "50%": {
+    opacity: "0.0",
+  },
+  "100%": {
+    opacity: "1.0"
   }
-})
 
+});
 
-export { writeMachine };
+export { flicker };
