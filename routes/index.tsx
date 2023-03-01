@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Main>
       <div class="pt-3">
-        <MyTitle name="Alvaro Vanegas" greetingType="I'am" />
+        <MyTitle name="Alvaro Vanegas" greetingType="I'm" />
       </div>
     </Main>
   );
