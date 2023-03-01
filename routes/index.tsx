@@ -1,11 +1,12 @@
 import Main from "../components/layouts/Main.tsx";
-import TitleTyping from "../components/titles/TitleTyping.tsx";
+
+import MyTitle from "../islands/MyTitle.tsx";
 
 export default function Home() {
   return (
     <Main>
       <div class="pt-3">
-        <TitleTyping name="Alvaro Vanegas" />
+        <MyTitle name="Alvaro Vanegas" greetingType="I'am" />
       </div>
     </Main>
   );
