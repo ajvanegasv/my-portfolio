@@ -106,6 +106,8 @@
     "https://deno.land/x/ts_morph@16.0.0/mod.ts": "adba9b82f24865d15d2c78ef6074b9a7457011719056c9928c800f130a617c93",
     "https://deno.land/x/ts_morph@16.0.0/ts_morph.d.ts": "38668b0e3780282a56a805425494490b0045d1928bd040c47a94095749dab8c3",
     "https://deno.land/x/ts_morph@16.0.0/ts_morph.js": "9fc0f3d6a3997c2df023fabc4e529d2117d214ffd4fd04247ca2f56c4e9cd470",
+    "https://esm.sh/*@preact/signals-core@1.0.1": "d1c9883f882fa2a4e33d1249c7dc4257055e247ae0118e1947ed6577d6e8fef8",
+    "https://esm.sh/*@preact/signals@1.0.3": "e744832aa044e7b789b4c1ba3e0098afaeab8555036e5386024885774dfc6ce1",
     "https://esm.sh/*preact-render-to-string@5.2.4": "b5ea1be1c1c40c87e04f7f29921e504032e0afa618ca8941aad479ea0f4d8751",
     "https://esm.sh/preact@10.11.0": "e888b244446037c56f1881173fb51d1f5fa7aae5599e6c5154619346a6a5094e",
     "https://esm.sh/preact@10.11.0/": "e888b244446037c56f1881173fb51d1f5fa7aae5599e6c5154619346a6a5094e",
@@ -136,6 +138,10 @@
     "https://esm.sh/v107/twind@0.16.17/css/css.d.ts": "4b117c96da2c93c88424f52112b9a31aeb2181990313db61daf075b364127ab1",
     "https://esm.sh/v107/twind@0.16.17/deno/css.js": "d410a7474dc2be6c4eb9e2b5a78e9f5ae42c028769d109c1924a5f37bb1dcfc7",
     "https://esm.sh/v107/twind@0.16.17/deno/twind.js": "e42bab2b3622f13f826150079ddc44d68af6aa17052a03497cebea80aea930ad",
-    "https://esm.sh/v107/twind@0.16.17/twind.d.ts": "54763379010e8184469f76a76bf936221097fb930a49534ae00e2c41a948a70a"
+    "https://esm.sh/v107/twind@0.16.17/twind.d.ts": "54763379010e8184469f76a76bf936221097fb930a49534ae00e2c41a948a70a",
+    "https://esm.sh/v110/@preact/signals-core@1.0.1/X-ZS8q/deno/signals-core.js": "0b0f3cf517d6e7881d004d840d95f07bd0cf687d4e30f02a3fe4307c3a0e5012",
+    "https://esm.sh/v110/@preact/signals-core@1.0.1/X-ZS8q/dist/signals-core.d.ts": "7a2bc0ea4bb4197fe888236017e1429cb3129ca64eb37146f11f102d9513c54d",
+    "https://esm.sh/v110/@preact/signals@1.0.3/X-ZS8q/deno/signals.js": "c2807ebadd1f0786d208bb474a5a879cdc2558ec130d6a3d2f38a4ca33726c96",
+    "https://esm.sh/v110/@preact/signals@1.0.3/X-ZS8q/dist/signals.d.ts": "f4fbae092f6622b348cc45503aef1a2076ea0c4bf37ab78a691a77220217a027"
   }
 }
