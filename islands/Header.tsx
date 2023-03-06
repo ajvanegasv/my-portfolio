@@ -16,7 +16,7 @@ export default function Header() {
         />
       </Head>
       <header
-        class={tw`bg-pallete-coral sticky ${css`top: 0; z-index: 10;`} text-pallete-dark font-bold`}
+        class={tw`bg-pallete-secondary-4 sticky ${css`top: 0; z-index: 10;`} text-pallete-primary font-bold font-jetBrains`}
       >
         <div class="relative block">
           <div
@@ -74,7 +74,7 @@ export default function Header() {
           >
           </div>
           <div
-            class={tw`flex justify-center ${css`top: 3rem;`} flex-col text-center bg-pallete-coral w-full absolute overflow-hidden ${
+            class={tw`flex justify-center ${css`top: 3rem;`} flex-col text-center bg-pallete-secondary-4 w-full absolute overflow-hidden ${
               checked.value ? "max-h-64" : "max-h-0"
             } transition-all duration-300`}
           >

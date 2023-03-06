@@ -1,6 +1,6 @@
-import * as icons from "react-icons/fa";
 
-type icon = typeof icons;
+import translation from "../language/es.json" assert { type: "json"};
 
+type Translation = typeof translation;
 
-export type { icon }
+export type { Translation }
