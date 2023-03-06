@@ -5,18 +5,14 @@ export default {
   theme: {
     colors: {
       pallete: {
-        dark: "#000022",
-        light: "#FBF5F3",
-        mustard: "#E28413",
-        brick: "#DE3C4B",
-        coral: "#C42847"
+        primary: "#000022",
+        "secondary-1": "#FBF5F3",
+        "secondary-2": "#E28413",
+        "secondary-3": "#DE3C4B",
+        "secondary-4": "#C42847"
       }
     },
     extend: {
-      height: {
-        body: "96vh",
-        footer: "4vh"
-      },
       fontFamily: {
         jetBrains: '"JetBrains Mono"'
       }
