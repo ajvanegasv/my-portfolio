@@ -1,0 +1,13 @@
+{
+  "home": {
+    "aboutme": [""],
+    "education": [
+      {
+        "name": "Servicio Nacional de Aprendizaje (SENA)",
+        "date": "2018 - 2020",
+        "career": "Analisis y desarrollo de sistemas informáticos"
+      }
+    ]
+  },
+  "blog": {}
+}

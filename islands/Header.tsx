@@ -1,30 +1,27 @@
 import { tw } from "twind";
 import { css } from "twind/css";
 import { useSignal } from "@preact/signals";
-import { Head } from "$fresh/runtime.ts";
 
-export default function Header() {
+import { HeaderProps } from "../utils/islands/interfaces/Header.ts";
+
+import BtnLanguage from "./BtnLanguage.tsx";
+export default function Header({ lang }: HeaderProps) {
   const checked = useSignal(false);
 
   return (
     <>
-      <Head>
-        <title>Alvaro J Vanegas - Software Development</title>
-        <meta
-          name="description"
-          content="Alvaro J Vanegas - Software Development website"
-        />
-      </Head>
       <header
-        class={tw`bg-pallete-secondary-4 sticky ${css`top: 0; z-index: 10;`} text-pallete-primary font-bold font-jetBrains`}
+        class={tw`bg-pallete-secondary-4 sticky ${css`top: 0; z-index: 10;`} text-pallete-primary font-bold `}
       >
         <div class="relative block">
           <div
             class={tw`flex h-12 flex-row items-center justify-between gap-6 px-4`}
-            onClick={() => checked.value = !checked.value}
           >
             <div class={tw`flex min-h-screen items-center justify-center`}>
-              <div class={tw`group relative my-2 h-5 w-7 cursor-pointer`}>
+              <div
+                class={tw`group relative my-2 h-5 w-7 cursor-pointer`}
+                onClick={() => checked.value = !checked.value}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class={`absolute transition ${
@@ -65,6 +62,7 @@ export default function Header() {
                 </svg>
               </div>
             </div>
+            <BtnLanguage lang={lang} />
           </div>
           <div
             class={tw`absolute w-full ${css`background-color: black;`} ${

@@ -3,7 +3,7 @@ import { tw } from "twind";
 export default function Footer () { 
 
   return (
-    <footer class={tw`bg-pallete-secondary-4 text-pallete-primary p-3 font-jetBrains`}>
+    <footer class={tw`bg-pallete-secondary-4 text-pallete-primary p-3 `}>
       <div class="flex">
         <div>
           <h1 class="font-semibold text-2xl">Alvaro J Vanegas</h1>

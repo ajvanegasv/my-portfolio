@@ -10,7 +10,8 @@ export default {
         "secondary-2": "#E28413",
         "secondary-3": "#DE3C4B",
         "secondary-4": "#C42847"
-      }
+      },
+      gray: "#808080"
     },
     extend: {
       fontFamily: {

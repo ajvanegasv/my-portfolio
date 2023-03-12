@@ -1,6 +1,6 @@
 import { Translation } from "./types.ts";
 interface State {
-  lang: "es";
+  lang: "es" | "en";
   t: Translation;
 }
 
