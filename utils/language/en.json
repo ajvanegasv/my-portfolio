@@ -1,0 +1,44 @@
+{
+  "home": {
+    "aboutme": [
+      "Welcome, I'm a Full Stack developer, passionate about technology and always looking for personal and professional growth (who doesn't like to grow, right? :P)",
+      "Like many, I started as a developer wanting to create video games, but now I develop web applications. For me, building applications is an exciting dedication because it challenges you to learn and grow professionally. I hope one day you can enjoy my creations. Who knows? It could be many things, like a video game or even this website could inspire you to create your own (if that's the case, let me know ;D).",
+      "I like discovering new things that have a positive impact on me, such as traveling. One day I hope to discover many places on this wonderful planet (you can help me achieve this goal by taking care of our planet :D)",
+      "I currently live in Barranquilla - Colombia, a festive city where people are cheerful and like to have fun as much as I do.",
+      "On this website, you will find my education, experience, projects, and much more about me. Get to know me! I also hope to get to know you."
+    ],
+    "education": [
+      {
+        "name": "Servicio Nacional de Aprendizaje (SENA)",
+        "date": "2018 - 2020",
+        "career": "Analysis and Development of Computer Systems"
+      }
+    ],
+    "experience": [
+      {
+        "name": "ISES S.A.S",
+        "date": "2020 - 2022",
+        "career": "Innovation and Development Assistant",
+        "description": "My job involved developing modules in PHP (CodeIgniter) and JavaScript (jQuery) and providing support for internal software that manages various administrative activities in all areas."
+      },
+      {
+        "name": "Datafis S.A.S",
+        "date": "2022 - Present",
+        "career": "Development Engineer",
+        "description": "Developed various projects using PHP (Laravel), NodeJS, and NextJS, which manage the cadastre in certain municipalities in Colombia in an administrative way."
+      }
+    ],
+    "projects": [
+      {
+        "name": "Pokedex",
+        "status": "In development",
+        "description": "Web App with information about 500 Pokemons",
+        "tecnology": [
+          "Vue"
+        ],
+        "repo": "https://github.com/ajvanegasv/pokedex"
+      }
+    ]
+  },
+  "blog": {}
+}

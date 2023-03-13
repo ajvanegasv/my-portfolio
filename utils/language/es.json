@@ -1,0 +1,42 @@
+{
+  "home": {
+    "aboutme": [
+      "Bienvenidos, soy un desarrollador Full Stack, un apasionado de la tecnólogia y siempre busco un crecimiento en mi (¿O es que a quién no le gusta crecer tanto personal como profesionalmente? :P)",
+      "Como muchos inicié como desarrollador queriendo crear videojuegos pero actualmente me dedico a desarrollar aplicaciones web, para mí construir aplicaciones es una dedicación emocionante porque te reta a ti mismo a aprender y a crecer profesionalmente, espero algún día puedas disfrutar de mis creaciones ¿Quién sabe? puede ser muchas cosas como un videojuego o incluso este sitio web pueda llegar a inspirarte a crear el tuyo (si es el caso hazmelo saber ;D).",
+      "Me gusta descubrir cosas nuevas que aporten positivamente en mí como lo es viajar, algún día espero descubrir muchos lugares de este maravilloso planeta (me aportarias con esta meta cuidando nuestro planeta :D)",
+      "Actualmente vivo en Barranquilla - Colombia, una ciudad fiestera, donde la gente es alegre y le gusta divertirse tanta como a mí",
+      "En este website encontraras mi educacion, experiencia, proyectos y mucho mas de mí, ¡conoceme! yo también espero conocerte."
+    ],
+    "education": [
+      {
+        "name": "Servicio Nacional de Aprendizaje (SENA)",
+        "date": "2018 - 2020",
+        "career": "Analisis y desarrollo de sistemas informáticos"
+      }
+    ],
+    "experience": [
+      {
+        "name": "ISES S.A.S",
+        "date": "2020 - 2022",
+        "career": "Auxiliar Innovacion y Desarrollo",
+        "description": "Mi trabajo consistia en desarrollar modulos en PHP (codeigniter) y Javascript (Jquery) y brindar soporte al software interno que gestiona diferentes actividades administrativas de todas las areas"
+      },
+      {
+        "name": "Datafis S.A.S",
+        "date": "2022 - Present",
+        "career": "Ingeniero de Desarrollo",
+        "description": "Desarrollo distintos proyectos hechos en PHP (Laravel), NodeJS y NextJS que se encargan de manejar de manera administrativas el catastro en ciertos municipios de colombia"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Pokedex",
+        "status": "En desarrollo",
+        "description": "Web App con informacion de 500 pokemones",
+        "tecnology": ["Vue"],
+        "repo": "https://github.com/ajvanegasv/pokedex"
+      }
+    ]
+  },
+  "blog": {}
+}

@@ -3,23 +3,31 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import config from "./deno.json" assert { type: "json" };
-import * as $0 from "./routes/_middleware.ts";
-import * as $1 from "./routes/index.tsx";
-import * as $2 from "./routes/projects/index.tsx";
-import * as $$0 from "./islands/ConctactMe.tsx";
-import * as $$1 from "./islands/Header.tsx";
-import * as $$2 from "./islands/MyTitle.tsx";
+import * as $0 from "./routes/_app.tsx";
+import * as $1 from "./routes/_middleware.ts";
+import * as $2 from "./routes/blog/index.tsx";
+import * as $3 from "./routes/index.tsx";
+import * as $$0 from "./islands/BtnLanguage.tsx";
+import * as $$1 from "./islands/ConctactMe.tsx";
+import * as $$2 from "./islands/DescriptionExperience.tsx";
+import * as $$3 from "./islands/FormContact.tsx";
+import * as $$4 from "./islands/Header.tsx";
+import * as $$5 from "./islands/MyTitle.tsx";
 
 const manifest = {
   routes: {
-    "./routes/_middleware.ts": $0,
-    "./routes/index.tsx": $1,
-    "./routes/projects/index.tsx": $2,
+    "./routes/_app.tsx": $0,
+    "./routes/_middleware.ts": $1,
+    "./routes/blog/index.tsx": $2,
+    "./routes/index.tsx": $3,
   },
   islands: {
-    "./islands/ConctactMe.tsx": $$0,
-    "./islands/Header.tsx": $$1,
-    "./islands/MyTitle.tsx": $$2,
+    "./islands/BtnLanguage.tsx": $$0,
+    "./islands/ConctactMe.tsx": $$1,
+    "./islands/DescriptionExperience.tsx": $$2,
+    "./islands/FormContact.tsx": $$3,
+    "./islands/Header.tsx": $$4,
+    "./islands/MyTitle.tsx": $$5,
   },
   baseUrl: import.meta.url,
   config,

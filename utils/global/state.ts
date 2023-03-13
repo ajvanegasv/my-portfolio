@@ -2,6 +2,4 @@ import { signal } from "@preact/signals";
 
 import { Translation } from "./types.ts";
 
-const T = signal<Translation | null>(null);
-
-export { T };
+export const T = signal<Translation | null>(null);
