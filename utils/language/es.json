@@ -13,6 +13,29 @@
         "date": "2018 - 2020",
         "career": "Analisis y desarrollo de sistemas informáticos"
       }
+    ],
+    "experience": [
+      {
+        "name": "ISES S.A.S",
+        "date": "2020 - 2022",
+        "career": "Auxiliar Innovacion y Desarrollo",
+        "description": "Mi trabajo consistia en desarrollar modulos en PHP (codeigniter) y Javascript (Jquery) y brindar soporte al software interno que gestiona diferentes actividades administrativas de todas las areas"
+      },
+      {
+        "name": "Datafis S.A.S",
+        "date": "2022 - Present",
+        "career": "Ingeniero de Desarrollo",
+        "description": "Desarrollo distintos proyectos hechos en PHP (Laravel), NodeJS y NextJS que se encargan de manejar de manera administrativas el catastro en ciertos municipios de colombia"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Pokedex",
+        "status": "En desarrollo",
+        "description": "Web App con informacion de 500 pokemones",
+        "tecnology": ["Vue"],
+        "repo": "https://github.com/ajvanegasv/pokedex"
+      }
     ]
   },
   "blog": {}

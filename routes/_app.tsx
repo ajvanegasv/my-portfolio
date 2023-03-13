@@ -11,7 +11,7 @@ export default function App({ Component }: AppProps) {
           content="Alvaro J Vanegas - Software Development website"
         />
       </Head>
-      <body class="font-jetBrains bg-pallete-primary">
+      <body id="app" class="font-jetBrains bg-pallete-primary">
         <Component />
       </body>
     </html>

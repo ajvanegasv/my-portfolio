@@ -1,6 +1,7 @@
 import { tw } from "twind";
 import { css } from "twind/css";
 import { useSignal } from "@preact/signals";
+import { FaUserAlt, FaHome, FaStar, FaTelegramPlane, FaSuitcase, FaGitAlt , FaGraduationCap, FaPenAlt} from "react-icons/fa"
 
 import { HeaderProps } from "../utils/islands/interfaces/Header.ts";
 
@@ -8,6 +9,19 @@ import BtnLanguage from "./BtnLanguage.tsx";
 export default function Header({ lang }: HeaderProps) {
   const checked = useSignal(false);
 
+  const drawerhandler = (): void => {
+    checked.value = !checked.value;
+
+    const body = document.querySelector("body");
+    if (body != null && checked.value) body.style.overflow = "hidden";
+    if (body != null && !checked.value) body.style.overflow = "visible";
+  };
+
+  const closedrawer = (): void => { 
+    checked.value = false;
+    const body = document.querySelector("body");
+    if(body != null) body.style.overflow = "visible";
+  }
   return (
     <>
       <header
@@ -20,7 +34,7 @@ export default function Header({ lang }: HeaderProps) {
             <div class={tw`flex min-h-screen items-center justify-center`}>
               <div
                 class={tw`group relative my-2 h-5 w-7 cursor-pointer`}
-                onClick={() => checked.value = !checked.value}
+                onClick={drawerhandler}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -68,20 +82,24 @@ export default function Header({ lang }: HeaderProps) {
             class={tw`absolute w-full ${css`background-color: black;`} ${
               checked.value ? "min-h-screen opacity-80" : "min-h-0 opacity-0"
             } transition-all duration-300`}
-            onClick={() => checked.value = false}
+            onClick={closedrawer}
           >
           </div>
           <div
-            class={tw`flex justify-center ${css`top: 3rem;`} flex-col text-center bg-pallete-secondary-4 w-full absolute overflow-hidden ${
+          onClick={closedrawer}
+            class={tw`flex justify-start px-10 ${css`top: 3rem;`} flex-col bg-pallete-secondary-4 w-full absolute overflow-hidden ${
               checked.value ? "max-h-64" : "max-h-0"
             } transition-all duration-300`}
           >
-            <a href="#aboutme">About me</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/blog">Blog</a>
+            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#aboutme"><FaUserAlt /> About me</a>
+            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#education"><FaGraduationCap /> Education</a>
+            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#skills"><FaStar /> Skills</a>
+            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#experience"><FaSuitcase /> Experience</a>
+            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#projects"><FaGitAlt /> Projects</a>
+            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#contactme"><FaTelegramPlane /> Contact Me</a>
+            <div class="border-b my-0.5 "></div>
+            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="/"><FaHome /> Home</a>
+            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300 mb-2" href="/blog"><FaPenAlt /> Blog</a>
           </div>
         </div>
       </header>
