@@ -8,20 +8,47 @@ export default function Footer() {
         <div>
           <h1 class="font-semibold text-2xl">Alvaro J Vanegas</h1>
           <h4>Full Stack Development</h4>
-          <div class="flex flex-wrap gap-2 text-xl">
-            <a target="_blank" href="https://github.com/ajvanegasv">
+          <div class="flex flex-wrap gap-4 text-3xl">
+            <a
+              target="_blank"
+              title="github"
+              href="https://github.com/ajvanegasv"
+            >
               <FaGithub />
             </a>
-            <a target="_blank" href="https://www.instagram.com/ajvanegasv/">
+            <a
+              target="_blank"
+              title="Instagram"
+              href="https://www.instagram.com/ajvanegasv/"
+            >
               <FaInstagram />
             </a>
-            <a target="_blank" href="https://twitter.com/ajvanegasv">
+            <a
+              target="_blank"
+              title="twitter"
+              href="https://twitter.com/ajvanegasv"
+            >
               <FaTwitter />
             </a>
           </div>
         </div>
       </div>
-      <div class="flex justify-start text-sm items-center gap-2 my-3">
+      <div class="flex justify-between my-3">
+        <div>
+          <h6 class="font-bold">Legal</h6>
+          <a href="#" class="hover:underline text-sm">Cookies</a>
+        </div>
+        <div class="flex flex-col">
+          <h6 className="font-bold">Resources</h6>
+          <a href="https://iconos8.es/icons" target="_blank" class="text-sm hover:underline">
+            iconos8
+          </a>
+          <a href="https://iconduck.com/" target="_blank" class="text-sm hover:underline">
+            iconduck
+          </a>
+        </div>
+      </div>
+      <div class="flex justify-center text-sm items-center gap-2 my-3">
         <h4>
           All rights reserved
         </h4>
