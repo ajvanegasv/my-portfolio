@@ -24,12 +24,14 @@ export default {
       {
         fontFamily: "JetBrains Mono",
         fontWeight: "normal",
-        src: 'url(/fonts/JetBrainsMono-Regular.woff2) format("woff2")'
+        src: 'url(/fonts/JetBrainsMono-Regular.woff2) format("woff2")',
+        fontDisplay: "swap"
       },
       {
         fontFamily: "JetBrains Mono",
         fontWeight: "bold",
-        src: 'url(/fonts/JetBrainsMono-Bold.woff2) format("woff2")'
+        src: 'url(/fonts/JetBrainsMono-Bold.woff2) format("woff2")',
+        fontDisplay: "swap"
       }
     ]
   }
