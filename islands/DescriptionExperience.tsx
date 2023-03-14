@@ -9,7 +9,7 @@ export default function DescriptionExperience(
     <>
       <div class="flex justify-center">
         <div
-          className="text-sm w-5/6 text-center transition-300 hover:text-pallete-secondary-2 border-b"
+          className="text-sm w-5/6 text-center transition-300 hover:text-pallete-secondary-2 border-b cursor-pointer"
           onClick={() => open.value = !open.value}
         >
           Description
