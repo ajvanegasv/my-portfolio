@@ -14,8 +14,8 @@ export default function Experience({ data }: { data: Translation }) {
       {data.home.experience.map(({ name, date, career, description }, index) => (
         <div key={index} class="my-5">
           <h3 class="font-bold">{name}</h3>
-          <p class="text-sm text-gray">{career}</p>
-          <p class="text-sm text-gray">{date}</p>
+          <p class="text-sm text-pallete-secondary-3">{career}</p>
+          <p class="text-sm text-pallete-secondary-3">{date}</p>
           <DescriptionExperience description={description} />
         </div>
       ))}

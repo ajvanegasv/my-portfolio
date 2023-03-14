@@ -19,14 +19,14 @@ export default function Projects({ data }: { data: Translation }) {
           return (
             <div class="my-5" key={index}>
               <h3 class="font-bold">{name}</h3>
-              <p class="text-sm text-gray">{description}</p>
-              <p class="text-sm text-gray">Status: {status}</p>
+              <p class="text-sm text-pallete-secondary-3">{description}</p>
+              <p class="text-sm text-pallete-secondary-3">Status: {status}</p>
               {repo
                 ? (
                   <a
                     target="_blank"
                     href={repo}
-                    class="text-sm text-gray gap-2 flex items-center"
+                    class="text-sm text-pallete-secondary-3 gap-2 flex items-center"
                   >
                     <FaGithub />
                     <p class="hover:border-b">Repository</p>

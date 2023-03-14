@@ -5,13 +5,13 @@ export default {
   theme: {
     colors: {
       pallete: {
-        primary: "#000022",
-        "secondary-1": "#FBF5F3",
-        "secondary-2": "#E28413",
-        "secondary-3": "#DE3C4B",
-        "secondary-4": "#C42847"
+        primary: "#0D0D0D",
+        "secondary-1": "#F2F2F2",
+        "secondary-2": "#5DA676",
+        "secondary-3": "#BFBFBF",
+        "secondary-4": "#0583F2"
       },
-      gray: "#808080"
+      gray: "#BFBFBF"
     },
     extend: {
       fontFamily: {
