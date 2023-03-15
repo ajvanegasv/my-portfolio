@@ -19,10 +19,10 @@ export default function Blog(props: PageProps<Data>) {
   return (
     <>
       <StaticHeader lang={props.data.lang} />
-      <main class="h-screen bg-pallete-primary p-5">
+      <main class="h-screen bg-pallete-primary p-5 flex items-center">
         <section>
-          <h1 class="text-2xl text-center text-pallete-secondary-1 font-bold">Working in progress</h1>
-          <img class="object-contain h-48 w-96" src={asset("assets/workingprogress.svg")} alt="Working in progress" />
+          <h1 class="text-2xl text-center text-pallete-secondary-1 font-bold mb-4">Working in progress</h1>
+          <img class="object-contain h-48 w-96" src={asset("assets/workinprogress.svg")} alt="Working in progress" />
         </section>
       </main>
       <Footer />
