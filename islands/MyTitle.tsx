@@ -9,7 +9,7 @@ export default function MyTitle(props: { name: string; greetingType: string }) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setGreeting(props.greetingType.slice(0, greeting.length + 1));
-    }, 150);
+    }, 100);
     return () => clearTimeout(timeout);
   }, [greeting]);
 
@@ -17,7 +17,7 @@ export default function MyTitle(props: { name: string; greetingType: string }) {
     if (props.greetingType.length === greeting.length) {
       const timeout = setTimeout(() => {
         setName(props.name.slice(0, name.length + 1));
-      }, 200);
+      }, 150);
       return () => clearTimeout(timeout);
     }
   }, [name, greeting]);
