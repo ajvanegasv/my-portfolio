@@ -4,7 +4,7 @@ import DescriptionExperience from "../../islands/DescriptionExperience.tsx";
 
 export default function Experience({ data }: { data: Translation }) {
   return (
-    <div
+    <section
       id="experience"
       class="text-pallete-secondary-1 bg-pallete-primary"
     >
@@ -19,6 +19,6 @@ export default function Experience({ data }: { data: Translation }) {
           <DescriptionExperience description={description} />
         </div>
       ))}
-    </div>
+    </section>
   );
 }

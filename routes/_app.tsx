@@ -1,6 +1,8 @@
 import { Head } from "$fresh/runtime.ts";
 import { AppProps } from "$fresh/server.ts";
+import { tw } from "twind";
 
+import { globalStyles } from "../utils/global/styles.ts";
 export default function App({ Component }: AppProps) {
   return (
     <html>
@@ -11,7 +13,7 @@ export default function App({ Component }: AppProps) {
           content="Alvaro J Vanegas - Software Development website"
         />
       </Head>
-      <body id="app" class="font-jetBrains bg-pallete-primary">
+      <body id="app" class={tw`bg-pallete-primary ${globalStyles}"`}>
         <Component />
       </body>
     </html>

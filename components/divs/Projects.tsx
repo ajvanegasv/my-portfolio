@@ -5,7 +5,7 @@ import { iconList } from "../../utils/components/helper/IconsHelper.ts";
 
 export default function Projects({ data }: { data: Translation }) {
   return (
-    <div id="projects" class="text-pallete-secondary-1 bg-pallete-primary">
+    <section id="projects" class="text-pallete-secondary-1 bg-pallete-primary">
       <h1 className="text-xl border-b mb-2 text-pallete-secondary-4">
         Projects
       </h1>
@@ -42,6 +42,6 @@ export default function Projects({ data }: { data: Translation }) {
           );
         },
       )}
-    </div>
+    </section>
   );
 }

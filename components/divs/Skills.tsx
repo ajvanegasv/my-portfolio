@@ -2,7 +2,7 @@ import { asset } from "$fresh/runtime.ts";
 
 export default function Skills() {
   return (
-    <div id="skills">
+    <section id="skills">
       <h1 class="text-xl border-b mb-2 text-pallete-secondary-4">Skills</h1>
       <div class="my-3 flex justify-start flex-wrap gap-2">
         <img class="h-10 w-10" src={asset("php.svg")} alt="php" />
@@ -67,6 +67,6 @@ export default function Skills() {
         />
         <img src={asset("docker.svg")} alt="docker" class="h-10 w-10" />
       </div>
-    </div>
+    </section>
   );
 }
