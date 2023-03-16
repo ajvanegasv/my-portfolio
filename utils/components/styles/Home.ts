@@ -1,5 +1,11 @@
 import { css } from "twind/css";
 
+const homeStyle = css({
+  "&": {
+    height: "75vh",
+  },
+});
+
 const psm = css({
   "&": {
     "padding-left": "10%",
@@ -42,4 +48,4 @@ const p3xl = css({
   },
 });
 
-export { pmd, psm, plg, pxl, p2xl, p3xl };
+export { pmd, psm, plg, pxl, p2xl, p3xl, homeStyle };

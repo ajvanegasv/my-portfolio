@@ -36,7 +36,8 @@
         "tecnology": [
           "Vue"
         ],
-        "repo": "https://github.com/ajvanegasv/pokedex"
+        "repo": "https://github.com/ajvanegasv/pokedex",
+        "url": "https://pokedex-pi-six.vercel.app/"
       }
     ]
   },

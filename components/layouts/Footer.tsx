@@ -9,7 +9,7 @@ export default function Footer() {
       <div class="flex sm:w-1/2">
         <div>
           <h1 class="font-semibold text-2xl">Alvaro J Vanegas</h1>
-          <h4>Full Stack Development</h4>
+          <h4>Full Stack Developer</h4>
           <div class="flex flex-wrap gap-4 text-3xl">
             <a
               target="_blank"
@@ -38,7 +38,7 @@ export default function Footer() {
       <div class="flex sm:w-1/2 justify-between my-3 md:gap-3 lg:gap-6 xl:gap-9">
         <div class="flex flex-col">
           <h6 class="font-bold">Legal</h6>
-          <a href="#" class="hover:underline text-sm">Cookies</a>
+          <a href="/" class="hover:underline text-sm">Cookies</a>
         </div>
         <div class="flex flex-col">
           <h6 className="font-bold">Resources</h6>
