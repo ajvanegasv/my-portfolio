@@ -28,7 +28,7 @@ export default function Home(props: PageProps<Data>) {
       <div class="pt-3 bg-pallete-secondary-4 h-screen flex justify-center text-center text-pallete-primary items-center ">
         <MyTitle name="Alvaro Vanegas" greetingType="Hi, I'm" />
       </div>
-      <main class="bg-pallete-primary p-5 font-bold">
+      <main class="bg-pallete-primary p-5 font-bold lg:px-32 xl:px-44 2xl:px-52">
         <Aboutme data={props.data.t} />
         <Education data={props.data.t} />
         <Skills />
