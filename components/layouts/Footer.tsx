@@ -3,7 +3,7 @@ import { FaCopyright, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer class={tw`bg-pallete-secondary-4 text-pallete-primary p-3 `}>
+    <footer class={tw`bg-pallete-secondary-4 text-pallete-primary p-3 lg:flex lg:justify-around `}>
       <div class="flex">
         <div>
           <h1 class="font-semibold text-2xl">Alvaro J Vanegas</h1>
@@ -33,8 +33,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div class="flex justify-between my-3">
-        <div>
+      <div class="flex justify-between my-3 lg:gap-6 xl:gap-9">
+        <div class="flex flex-col">
           <h6 class="font-bold">Legal</h6>
           <a href="#" class="hover:underline text-sm">Cookies</a>
         </div>
