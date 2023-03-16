@@ -1,4 +1,5 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
+import { tw } from "twind";
 
 import MyTitle from "../islands/MyTitle.tsx";
 import Header from "../islands/Header.tsx";
@@ -11,6 +12,8 @@ import Skills from "../components/divs/Skills.tsx";
 import Experience from "../components/divs/Experience.tsx";
 import Projects from "../components/divs/Projects.tsx";
 import Contactme from "../components/divs/Contactme.tsx";
+
+import { pmd } from "../utils/components/styles/Home.ts";
 
 export const handler: Handlers<Data, State> = {
   GET(_req, ctx) {
@@ -28,7 +31,7 @@ export default function Home(props: PageProps<Data>) {
       <div class="pt-3 bg-pallete-secondary-4 h-screen flex justify-center text-center text-pallete-primary items-center ">
         <MyTitle name="Alvaro Vanegas" greetingType="Hi, I'm" />
       </div>
-      <main class="bg-pallete-primary p-5 font-bold lg:px-32 xl:px-44 2xl:px-52">
+      <main class={tw`bg-pallete-primary p-5 font-bold md:${pmd}`}>
         <Aboutme data={props.data.t} />
         <Education data={props.data.t} />
         <Skills />

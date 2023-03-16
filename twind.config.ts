@@ -15,6 +15,9 @@ export default {
     extend: {
       fontFamily: {
         jetBrains: '"JetBrains Mono"'
+      },
+      screen: {
+        "3xl": { min: "1920px" } 
       }
     }
   },
