@@ -6,7 +6,7 @@ export default function TitleTyping(
 ) {
   return (
     <div>
-      <h1 class={tw`text-3xl font-bold`}>
+      <h1 class={tw`text-3xl font-bold lg:text-6xl 2xl:text-left text-center text-pallete-primary`}>
         {props.greeting}
         {props.greetingLength === props.greeting.length ? <br /> : null}
         {props.name}
