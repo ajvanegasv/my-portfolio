@@ -1,7 +1,7 @@
 import { tw } from "twind";
 import { css } from "twind/css";
 import { useSignal } from "@preact/signals";
-import { FaUserAlt, FaHome, FaStar, FaTelegramPlane, FaSuitcase, FaGitAlt , FaGraduationCap, FaPenAlt} from "react-icons/fa"
+import HeaderOptions from "../components/divs/HeaderOptions.tsx";
 
 import { HeaderProps } from "../utils/islands/interfaces/Header.ts";
 
@@ -17,19 +17,19 @@ export default function Header({ lang }: HeaderProps) {
     if (body != null && !checked.value) body.style.overflow = "visible";
   };
 
-  const closedrawer = (): void => { 
+  const closedrawer = (): void => {
     checked.value = false;
     const body = document.querySelector("body");
-    if(body != null) body.style.overflow = "visible";
-  }
+    if (body != null) body.style.overflow = "visible";
+  };
   return (
     <>
       <header
         class={tw`bg-pallete-secondary-4 sticky ${css`top: 0; z-index: 10;`} text-pallete-primary font-bold `}
       >
-        <div class="relative block">
+        <div class="relative block xl:static xl:px-9">
           <div
-            class={tw`flex h-12 flex-row items-center justify-between gap-6 px-4`}
+            class={tw`flex h-12 flex-row items-center justify-between gap-6 px-4 xl:hidden`}
           >
             <div class={tw`flex min-h-screen items-center justify-center`}>
               <div
@@ -81,25 +81,23 @@ export default function Header({ lang }: HeaderProps) {
           <div
             class={tw`absolute w-full ${css`background-color: black;`} ${
               checked.value ? "min-h-screen opacity-80" : "min-h-0 opacity-0"
-            } transition-all duration-300`}
+            } transition-all duration-300 xl:hidden`}
             onClick={closedrawer}
           >
           </div>
           <div
-          onClick={closedrawer}
+            onClick={closedrawer}
             class={tw`flex justify-start px-10 ${css`top: 3rem;`} flex-col bg-pallete-secondary-4 w-full absolute overflow-hidden ${
               checked.value ? "max-h-64" : "max-h-0"
-            } transition-all duration-300`}
+            } transition-all duration-300 xl:hidden`}
           >
-            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#aboutme"><FaUserAlt /> About me</a>
-            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#education"><FaGraduationCap /> Education</a>
-            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#skills"><FaStar /> Skills</a>
-            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#experience"><FaSuitcase /> Experience</a>
-            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#projects"><FaGitAlt /> Projects</a>
-            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="#contactme"><FaTelegramPlane /> Contact Me</a>
-            <div class="border-b my-0.5 "></div>
-            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300" href="/"><FaHome /> Home</a>
-            <a class="flex items-center gap-2 hover:text-pallete-secondary-1 transition-300 mb-2" href="/blog"><FaPenAlt /> Blog</a>
+            <HeaderOptions />
+          </div>
+          <div class="hidden h-12 xl:flex xl:justify-between xl:items-center">
+            <div class="flex items-center gap-6">
+              <HeaderOptions />
+            </div>
+            <BtnLanguage lang={lang} />
           </div>
         </div>
       </header>

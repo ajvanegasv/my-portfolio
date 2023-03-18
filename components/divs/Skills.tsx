@@ -53,7 +53,7 @@ export default function Skills() {
         <img
           src={asset("nextjs.svg")}
           alt="nextjs"
-          class="h-10 w-10"
+          class="h-10 w-10 bg-pallete-secondary-1 rounded-full"
         />
         <img
           src={asset("mysql.svg")}

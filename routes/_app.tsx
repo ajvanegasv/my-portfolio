@@ -1,4 +1,4 @@
-import { Head } from "$fresh/runtime.ts";
+import { Head, asset } from "$fresh/runtime.ts";
 import { AppProps } from "$fresh/server.ts";
 import { tw } from "twind";
 
@@ -7,6 +7,7 @@ export default function App({ Component }: AppProps) {
   return (
     <html>
       <Head>
+        <link rel="icon" href={asset("terminal.ico")} />
         <title>Alvaro J Vanegas - Full Stack Dev</title>
         <meta
           name="description"

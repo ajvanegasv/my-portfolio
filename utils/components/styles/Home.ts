@@ -48,4 +48,18 @@ const p3xl = css({
   },
 });
 
-export { pmd, psm, plg, pxl, p2xl, p3xl, homeStyle };
+const img2xl = css({
+  "&": {
+    height: "26rem",
+    width: "26rem"
+  }
+});
+
+const divPresentation2xl = css({
+  "&": {
+    "padding-left": "15%",
+    "padding-right": "15%",
+  },
+});
+
+export { pmd, psm, plg, pxl, p2xl, p3xl, homeStyle, img2xl, divPresentation2xl };
