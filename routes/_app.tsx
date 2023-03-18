@@ -17,13 +17,13 @@ export default function App({ Component }: AppProps) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Alvaro J Vanegas" />
         <meta property="og:description" content="Alvaro J Vanegas Website" />
-        <meta property="og:image" content={asset("assets/socialcard.png")} />
+        <meta property="og:image" content="https://ajvanegasv.deno.dev/assets/socialcard.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="ajvanegasv.deno.dev" />
         <meta property="twitter:url" content="https://ajvanegasv.deno.dev/" />
         <meta name="twitter:title" content="Alvaro J Vanegas" />
         <meta name="twitter:description" content="Alvaro J Vanegas Website" />
-        <meta name="twitter:image" content={asset("assets/socialcard.png")} />
+        <meta name="twitter:image" content="https://ajvanegasv.deno.dev/assets/socialcard.png" />
       </Head>
       <body id="app" class={tw`bg-pallete-primary ${globalStyles}"`}>
         <Component />
