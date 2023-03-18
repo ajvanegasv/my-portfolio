@@ -1,7 +1,7 @@
 import { tw } from "twind";
 import { FaCopyright, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
-import { pxl, pmd, psm } from "../../utils/components/styles/Home.ts";
+import { pxl, pmd, psm } from "../../utils/components/styles/Footer.ts";
 
 export default function Footer() {
   return (
