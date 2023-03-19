@@ -14,10 +14,13 @@ export default function StaticHeader({ lang }: HeaderProps) {
         <div
           class={tw`flex h-12 flex-row items-center justify-between gap-6 px-4 xl:px-9`}
         >
-          <a href="/" class="flex items-center font-bold gap-2 hover:underline hover:text-pallete-secondary-1 transition-300">
+          <a
+            href="/"
+            class="flex items-center font-bold gap-2 hover:underline hover:text-pallete-secondary-1 transition-300"
+          >
             <FaRocket /> Go Home
           </a>
-          <BtnLanguage lang={lang} />
+          {lang ? <BtnLanguage lang={lang} /> : null}
         </div>
       </header>
     </>

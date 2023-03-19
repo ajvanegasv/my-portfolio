@@ -24,6 +24,7 @@ export default function App({ Component }: AppProps) {
         <meta name="twitter:title" content="Alvaro J Vanegas" />
         <meta name="twitter:description" content="Alvaro J Vanegas Website" />
         <meta name="twitter:image" content="https://ajvanegasv.deno.dev/assets/socialcard.png" />
+        <meta name="twitter:creator" content="@ajvanegasv" />
       </Head>
       <body id="app" class={tw`bg-pallete-primary ${globalStyles}"`}>
         <Component />

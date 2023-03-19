@@ -48,6 +48,7 @@ export default function Footer() {
           <a href="https://iconduck.com/" target="_blank" class="text-sm hover:underline">
             iconduck
           </a>
+          <a href="https://undraw.co/" target="_blank" class="text-sm hover:underline">unDraw</a>
         </div>
       </div>
       <div class="flex sm:w-full justify-center text-sm items-center gap-2 my-3">

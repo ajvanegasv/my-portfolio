@@ -36,7 +36,7 @@ export default function Home(props: PageProps<Data>) {
       <main class={tw`bg-pallete-primary p-5 font-bold sm:${psm} md:${pmd} lg:${plg} xl:${pxl} 2xl:${p2xl}`}>
         <Aboutme data={props.data.t} />
         <Education data={props.data.t} />
-        <Skills />
+        <Skills data={props.data.t} />
         <Experience data={props.data.t} />
         <Projects data={props.data.t} />
         <Contactme />
