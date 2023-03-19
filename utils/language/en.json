@@ -14,6 +14,106 @@
         "career": "Analysis and Development of Computer Systems"
       }
     ],
+    "skills": {
+      "soft": {
+        "title": "Soft Skills",
+        "habilitys": [
+          {
+            "name": "Adaptability",
+            "img": "adaptability.png"
+          },
+          {
+            "name": "Critical Thinking",
+            "img": "critical-thinkgin.png"
+          },
+          {
+            "name": "Empathy",
+            "img": "empathy.png"
+          },
+          {
+            "name": "Patience",
+            "img": "patience.png"
+          },
+          {
+            "name": "Resilience",
+            "img": "resilience.png"
+          }
+        ]
+      },
+      "hard": {
+        "title": "Hard Skills",
+        "habilitys": [
+          {
+            "name": "PHP",
+            "img": "php.svg"
+          },
+          {
+            "name": "CodeIgniter",
+            "img": "codeigniter.svg"
+          },
+          {
+            "name": "Laravel",
+            "img": "laravel.svg"
+          },
+          {
+            "name": "JavaScript",
+            "img": "javascript.svg"
+          },
+          {
+            "name": "TypeScript",
+            "img": "typescript.svg"
+          },
+          {
+            "name": "jQuery",
+            "img": "jquery.svg"
+          },
+          {
+            "name": "Node.js",
+            "img": "node.svg"
+          },
+          {
+            "name": "Vue.js",
+            "img": "vuejs.svg"
+          },
+          {
+            "name": "React",
+            "img": "react.svg"
+          },
+          {
+            "name": "Preact",
+            "img": "preact.svg"
+          },
+          {
+            "name": "Fresh",
+            "img": "logo.svg"
+          },
+          {
+            "name": "Deno",
+            "img": "deno.svg"
+          },
+          {
+            "name": "NestJS",
+            "img": "nestjs.svg"
+          },
+          {
+            "name": "Next.js",
+            "img": "nextjs.svg"
+          },
+          {
+            "name": "MySQL",
+            "img": "mysql.svg"
+          },
+          {
+            "name": "PostgreSQL",
+            "img": "postgresql.svg"
+          },
+          {
+            "name": "Docker",
+            "img": "docker.svg"
+          }
+        ]
+      }
+    },
     "experience": [
       {
         "name": "ISES S.A.S",

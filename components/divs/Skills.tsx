@@ -1,71 +1,38 @@
+import { Translation } from "../../utils/global/types.ts";
+
 import { asset } from "$fresh/runtime.ts";
 
-export default function Skills() {
+export default function Skills({ data }: { data: Translation }) {
   return (
     <section id="skills">
       <h1 class="text-xl border-b mb-2 text-pallete-secondary-4">Skills</h1>
-      <div class="my-3 flex justify-start flex-wrap gap-2">
-        <img class="h-10 w-10" src={asset("php.svg")} alt="php" />
-        <img
-          class="h-10 w-10"
-          src={asset("codeigniter.svg")}
-          alt="codeigniter"
-        />
-        <img
-          src={asset("laravel.svg")}
-          alt="laravel"
-          class="h-10 w-10"
-        />
-        <img
-          src={asset("javascript.svg")}
-          alt="javascript"
-          class="h-10 w-10"
-        />
-        <img
-          src={asset("typescript.svg")}
-          alt="typescript"
-          class="h-10 w-10"
-        />
-        <img
-          src={asset("jquery.svg")}
-          alt="jquery"
-          class="h-10 w-10"
-        />
-        <img
-          src={asset("node.svg")}
-          alt="nodejs"
-          class="h-10 w-10"
-        />
-        <img
-          src={asset("vuejs.svg")}
-          alt="vuejs"
-          class="h-10 w-10"
-        />
-        <img src={asset("react.svg")} alt="react" class="h-10 w-10" />
-        <img src={asset("preact.svg")} alt="preact" class="h-10 w-10" />
-        <img src={asset("logo.svg")} alt="fresh" class="h-10 w-10" />
-        <img src={asset("deno.svg")} alt="deno" class="h-10 w-10" />
-        <img
-          src={asset("nestjs.svg ")}
-          alt="nestjs"
-          class="h-10 w-10"
-        />
-        <img
-          src={asset("nextjs.svg")}
-          alt="nextjs"
-          class="h-10 w-10 bg-pallete-secondary-1 rounded-full"
-        />
-        <img
-          src={asset("mysql.svg")}
-          alt="mysql"
-          class="h-10 w-10"
-        />
-        <img
-          src={asset("postgresql.svg")}
-          alt="postgres"
-          class="h-10 w-10"
-        />
-        <img src={asset("docker.svg")} alt="docker" class="h-10 w-10" />
+      <div class="my-6">
+        <div class="my-3">
+          <h3 class="font-bold lg:text-lg text-pallete-secondary-1 mb-5">{data.home.skills.soft.title}</h3>
+          <div class="flex justify-around gap-3 flex-wrap">
+            {data.home.skills.soft.habilitys.map(({ name, img }) => (
+              <div class="flex flex-col gap-2 items-center m-3">
+                <img
+                  class="h-10 w-10 rounded"
+                  src={asset(img)}
+                  alt={name}
+                  title={name}
+                />
+                <p class="text-sm lg:text-base text-pallete-secondary-3">
+                  {name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="my-3">
+          <h3 class="font-bold lg:text-lg text-pallete-secondary-1 mb-5">{data.home.skills.hard.title}</h3>
+          <div class="flex justify-start flex-wrap gap-3">
+            {data.home.skills.hard.habilitys.map(({ name, img }) => (
+              <img class="h-10 w-10" src={asset(img)} alt={name} title={name} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
