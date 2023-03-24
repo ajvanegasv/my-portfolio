@@ -1,8 +1,35 @@
+import { useCallback, useState } from "preact/hooks";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export default function FormContact() {
+  const [status, setStatus] = useState<"sending" | "sent" | "failed">();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const submit = useCallback(async (event: Event) => {
+    event.preventDefault();
+    try {
+      setStatus("sending");
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      if (response.status !== 200) throw Error;
+      setStatus("sent");
+    } catch (e) {
+      setStatus("failed");
+    }
+  }, [form]);
+
   return (
-    <form>
+    <form onSubmit={submit}>
       <div class="mb-3">
         <label class="block mb-2" for="name">Name</label>
         <input
@@ -10,6 +37,13 @@ export default function FormContact() {
           type="text"
           name="name"
           id="name"
+          required
+          onInput={(e) => {
+            setForm((current) => ({
+              ...current,
+              name: e.currentTarget.value
+            }))
+          }}
         />
       </div>
       <div class="mb-3">
@@ -18,6 +52,15 @@ export default function FormContact() {
           class="block bg-pallete-primary w-full p-2 border rounded hover:border-pallete-secondary-2 focus:border-pallete-secondary-2 transition-300"
           type="text"
           pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+          id="email"
+          name="email"
+          onInput={(e) => {
+            setForm((current) => ({
+              ...current,
+              email: e.currentTarget.value
+            }))
+          }}
+          required
         />
       </div>
       <div class="mb-3">
@@ -27,6 +70,13 @@ export default function FormContact() {
           name="message"
           id="message"
           rows={5}
+          onInput={(e) => {
+            setForm((current) => ({
+              ...current,
+              message: e.currentTarget.value
+            }))
+          }}
+          required
         >
         </textarea>
       </div>
