@@ -1,12 +1,13 @@
 import { useCallback, useState } from "preact/hooks";
 import { useSignal } from "@preact/signals";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaCheckCircle, FaTelegramPlane, FaTimesCircle } from "react-icons/fa";
 
 export default function FormContact() {
   const [status, setStatus] = useState<
     "Sending" | "Sent" | "Failed" | "Waiting"
   >("Waiting");
   const lenght = useSignal(0);
+  const sent = useSignal<"Sent" | "Failed" | "Waiting">("Waiting");
 
   const [form, setForm] = useState({
     name: "",
@@ -28,10 +29,12 @@ export default function FormContact() {
       });
       if (response.status !== 200) throw Error;
       setStatus("Sent");
+      sent.value = "Sent";
     } catch (e) {
       setStatus("Failed");
+      sent.value = "Failed";
     } finally {
-      (document.getElementById('contact-form') as HTMLFormElement).reset();
+      (document.getElementById("contact-form") as HTMLFormElement).reset();
       setTimeout(() => {
         setStatus("Waiting");
       }, 3000);
@@ -103,14 +106,21 @@ export default function FormContact() {
         <p class="text-pallete-secondary-3 tracking-widest">
           {lenght.value}/300
         </p>
-        <button
-          class={`flex items-center gap-3 font-bold border hover:border-pallete-secondary-2 hover:text-pallete-secondary-2 transition-300 rounded p-1.5 ${
-            statusStyle[status]
-          }`}
-          disabled={status !== "Waiting" ? true : false}
-        >
-          <FaTelegramPlane /> {status !== "Waiting" ? status : "Send"}
-        </button>
+        <div class="flex items-center gap-3">
+          {sent.value === "Sent"
+            ? <FaCheckCircle class="text-pallete-secondary-2" />
+            : sent.value === "Failed"
+            ? <FaTimesCircle class="text-pallete-failed" />
+            : null}
+          <button
+            class={`flex items-center gap-3 font-bold border hover:border-pallete-secondary-2 hover:text-pallete-secondary-2 transition-300 rounded p-1.5 ${
+              statusStyle[status]
+            }`}
+            disabled={status !== "Waiting" ? true : false}
+          >
+            <FaTelegramPlane /> {status !== "Waiting" ? status : "Send"}
+          </button>
+        </div>
       </div>
     </form>
   );
