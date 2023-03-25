@@ -11,7 +11,7 @@ export default function Skills({ data }: { data: Translation }) {
           <h3 class="text-center font-bold lg:text-lg text-pallete-secondary-1 mb-5">
             {data.home.skills.soft.title}
           </h3>
-          <div class="flex justify-around gap-3 flex-wrap">
+          <div class="flex justify-around gap-3 mt-6 flex-wrap">
             {data.home.skills.soft.habilitys.map(({ name, img }) => (
               <div class="flex flex-col gap-2 items-center m-3">
                 <img

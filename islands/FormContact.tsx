@@ -33,7 +33,7 @@ export default function FormContact() {
     } finally {
       setTimeout(() => {
         setStatus("Waiting");
-      }, 250);
+      }, 3000);
     }
   }, [form]);
 
@@ -106,6 +106,7 @@ export default function FormContact() {
           class={`flex items-center gap-3 font-bold border hover:border-pallete-secondary-2 hover:text-pallete-secondary-2 transition-300 rounded p-1.5 ${
             statusStyle[status]
           }`}
+          disabled={status !== "Waiting" ? true : false}
         >
           <FaTelegramPlane /> {status !== "Waiting" ? status : "Send"}
         </button>
