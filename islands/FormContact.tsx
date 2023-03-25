@@ -1,8 +1,11 @@
-import { useCallback, useState } from "preact/hooks";
+import { useCallback, useState, useEffect } from "preact/hooks";
+import { useSignal } from "@preact/signals";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export default function FormContact() {
-  const [status, setStatus] = useState<"sending" | "sent" | "failed">();
+  const [status, setStatus] = useState<"Sending" | "Sent" | "Failed" | "Waiting">("Waiting");
+  const lenght = useSignal(0);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -12,7 +15,7 @@ export default function FormContact() {
   const submit = useCallback(async (event: Event) => {
     event.preventDefault();
     try {
-      setStatus("sending");
+      setStatus("Sending");
       const response = await fetch("/api/contact", {
         method: "POST",
         body: JSON.stringify({
@@ -22,11 +25,29 @@ export default function FormContact() {
         }),
       });
       if (response.status !== 200) throw Error;
-      setStatus("sent");
+      setStatus("Sent");
     } catch (e) {
-      setStatus("failed");
+      setStatus("Failed");
     }
   }, [form]);
+
+  useEffect(() => { 
+    if(status === "Sent" || status === "Failed"){
+      const timeout = setTimeout(() => {
+        setStatus("Waiting");
+      }, 250);
+
+      return clearTimeout(timeout);
+    }
+
+  }, [status]);
+
+  const statusStyle = {
+    "Sending": "text-pallete-secondary-1",
+    "Sent": "text-pallete-secondary-2",
+    "Failed": "text-pallete-failed",
+    "Waiting": ""
+  }
 
   return (
     <form onSubmit={submit}>
@@ -70,7 +91,9 @@ export default function FormContact() {
           name="message"
           id="message"
           rows={5}
+          maxLength={300}
           onInput={(e) => {
+            lenght.value = e.currentTarget.value.length;
             setForm((current) => ({
               ...current,
               message: e.currentTarget.value
@@ -80,9 +103,10 @@ export default function FormContact() {
         >
         </textarea>
       </div>
-      <div class="mb-3 flex justify-end items-center">
-        <button class="flex items-center gap-3 font-bold border hover:border-pallete-secondary-2 hover:text-pallete-secondary-2 transition-300 rounded p-1.5">
-          <FaTelegramPlane /> Send
+      <div class="mb-3 flex justify-between items-center">
+        <p class="text-pallete-secondary-3 tracking-widest">{lenght.value}/300</p>
+        <button class={`flex items-center gap-3 font-bold border hover:border-pallete-secondary-2 hover:text-pallete-secondary-2 transition-300 rounded p-1.5 ${statusStyle[status]}`}>
+          <FaTelegramPlane /> { status !== "Waiting" ? status : "Send" }
         </button>
       </div>
     </form>

@@ -10,6 +10,7 @@ export default {
         "secondary-2": "#5DA676",
         "secondary-3": "#BFBFBF",
         "secondary-4": "#0583F2",
+        failed: "#Df320D"
       },
     },
     extend: {
