@@ -31,6 +31,7 @@ export default function FormContact() {
     } catch (e) {
       setStatus("Failed");
     } finally {
+      (document.getElementById('contact-form') as HTMLFormElement).reset();
       setTimeout(() => {
         setStatus("Waiting");
       }, 3000);
@@ -45,7 +46,7 @@ export default function FormContact() {
   };
 
   return (
-    <form onSubmit={submit}>
+    <form onSubmit={submit} id="contact-form">
       <div class="mb-3">
         <label class="block mb-2" for="name">Name</label>
         <input
