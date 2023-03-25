@@ -1,9 +1,11 @@
-import { useCallback, useState, useEffect } from "preact/hooks";
+import { useCallback, useState } from "preact/hooks";
 import { useSignal } from "@preact/signals";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export default function FormContact() {
-  const [status, setStatus] = useState<"Sending" | "Sent" | "Failed" | "Waiting">("Waiting");
+  const [status, setStatus] = useState<
+    "Sending" | "Sent" | "Failed" | "Waiting"
+  >("Waiting");
   const lenght = useSignal(0);
 
   const [form, setForm] = useState({
@@ -28,26 +30,19 @@ export default function FormContact() {
       setStatus("Sent");
     } catch (e) {
       setStatus("Failed");
-    }
-  }, [form]);
-
-  useEffect(() => { 
-    if(status === "Sent" || status === "Failed"){
-      const timeout = setTimeout(() => {
+    } finally {
+      setTimeout(() => {
         setStatus("Waiting");
       }, 250);
-
-      return clearTimeout(timeout);
     }
-
-  }, [status]);
+  }, [form]);
 
   const statusStyle = {
     "Sending": "text-pallete-secondary-1",
     "Sent": "text-pallete-secondary-2",
     "Failed": "text-pallete-failed",
-    "Waiting": ""
-  }
+    "Waiting": "",
+  };
 
   return (
     <form onSubmit={submit}>
@@ -62,8 +57,8 @@ export default function FormContact() {
           onInput={(e) => {
             setForm((current) => ({
               ...current,
-              name: e.currentTarget.value
-            }))
+              name: e.currentTarget.value,
+            }));
           }}
         />
       </div>
@@ -78,8 +73,8 @@ export default function FormContact() {
           onInput={(e) => {
             setForm((current) => ({
               ...current,
-              email: e.currentTarget.value
-            }))
+              email: e.currentTarget.value,
+            }));
           }}
           required
         />
@@ -96,17 +91,23 @@ export default function FormContact() {
             lenght.value = e.currentTarget.value.length;
             setForm((current) => ({
               ...current,
-              message: e.currentTarget.value
-            }))
+              message: e.currentTarget.value,
+            }));
           }}
           required
         >
         </textarea>
       </div>
       <div class="mb-3 flex justify-between items-center">
-        <p class="text-pallete-secondary-3 tracking-widest">{lenght.value}/300</p>
-        <button class={`flex items-center gap-3 font-bold border hover:border-pallete-secondary-2 hover:text-pallete-secondary-2 transition-300 rounded p-1.5 ${statusStyle[status]}`}>
-          <FaTelegramPlane /> { status !== "Waiting" ? status : "Send" }
+        <p class="text-pallete-secondary-3 tracking-widest">
+          {lenght.value}/300
+        </p>
+        <button
+          class={`flex items-center gap-3 font-bold border hover:border-pallete-secondary-2 hover:text-pallete-secondary-2 transition-300 rounded p-1.5 ${
+            statusStyle[status]
+          }`}
+        >
+          <FaTelegramPlane /> {status !== "Waiting" ? status : "Send"}
         </button>
       </div>
     </form>

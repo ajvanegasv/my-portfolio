@@ -37,7 +37,7 @@ export default function Skills({ data }: { data: Translation }) {
                 <p class="text-sm lg:text-base text-pallete-secondary-3">
                   {section}
                 </p>
-                <div class="flex justify-start flex-wrap gap-3 mt-1">
+                <div class="flex justify-start flex-wrap gap-5 mt-4">
                   {content.map(({ name, img }) => (
                     <img
                       class="h-10 w-10"
