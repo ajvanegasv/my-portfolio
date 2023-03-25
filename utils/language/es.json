@@ -42,74 +42,85 @@
       },
       "hard": {
         "title": "Habilidades fuertes",
-        "habilitys": [
+        "abilities": [
           {
-            "name": "Php",
-            "img": "php.svg"
+            "section": "Lenguajes",
+            "content": [
+              {
+                "name": "PHP",
+                "img": "php.svg"
+              },
+              {
+                "name": "JavaScript",
+                "img": "javascript.svg"
+              },
+              {
+                "name": "TypeScript",
+                "img": "typescript.svg"
+              }
+            ]
           },
           {
-            "name": "Codeigniter",
-            "img": "codeigniter.svg"
+            "section": "Librerias & Frameworks",
+            "content": [
+              {
+                "name": "CodeIgniter",
+                "img": "codeigniter.svg"
+              },
+              {
+                "name": "Laravel",
+                "img": "laravel.svg"
+              },
+              {
+                "name": "jQuery",
+                "img": "jquery.svg"
+              },
+              {
+                "name": "Node.js",
+                "img": "node.svg"
+              },
+              {
+                "name": "Vue.js",
+                "img": "vuejs.svg"
+              },
+              {
+                "name": "Preact",
+                "img": "preact.svg"
+              },
+              {
+                "name": "Fresh",
+                "img": "logo.svg"
+              },
+              {
+                "name": "Deno",
+                "img": "deno.svg"
+              },
+              {
+                "name": "NestJS",
+                "img": "nestjs.svg"
+              },
+              {
+                "name": "Next.js",
+                "img": "nextjs.svg"
+              }
+            ]
           },
           {
-            "name": "Laravel",
-            "img": "laravel.svg"
-          },
-          {
-            "name": "Javascript",
-            "img": "javascript.svg"
-          },
-          {
-            "name": "Typescript",
-            "img": "typescript.svg"
-          },
-          {
-            "name": "Jquery",
-            "img": "jquery.svg"
-          },
-          {
-            "name": "Nodejs",
-            "img": "node.svg"
-          },
-          {
-            "name": "Vuejs",
-            "img": "vuejs.svg"
-          },
-          {
-            "name": "React",
-            "img": "react.svg"
-          },
-          {
-            "name": "Preact",
-            "img": "preact.svg"
-          },
-          {
-            "name": "Fresh",
-            "img": "logo.svg"
-          },
-          {
-            "name": "Deno",
-            "img": "deno.svg"
-          },
-          {
-            "name": "Nestjs",
-            "img": "nestjs.svg"
-          },
-          {
-            "name": "Nextjs",
-            "img": "nextjs.svg"
-          },
-          {
-            "name": "Mysql",
-            "img": "mysql.svg"
-          },
-          {
-            "name": "Postgresql",
-            "img": "postgresql.svg"
-          },
-          {
-            "name": "Docker",
-            "img": "docker.svg"
+            "section": "Otras habilidades",
+            "content": [
+              {
+                "name": "MySQL",
+                "img": "mysql.svg"
+              },
+              {
+                "name": "PostgreSQL",
+                "img": "postgresql.svg"
+              },
+              {
+                "name": "Docker",
+                "img": "docker.svg"
+              }
+            ]
           }
         ]
       }

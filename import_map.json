@@ -9,6 +9,7 @@
     "twind": "https://esm.sh/twind@0.16.17",
     "twind/": "https://esm.sh/twind@0.16.17/",
     "react-icons/fa": "https://deno.land/x/react_icons@0.2.3/fa/mod.ts",
-    "$std/http": "https://deno.land/std@0.178.0/http/mod.ts"
+    "$std/http": "https://deno.land/std@0.178.0/http/mod.ts",
+    "smtp": "https://deno.land/x/denomailer@1.6.0/mod.ts"
   }
 }
