@@ -1,5 +1,11 @@
 import { tw } from "twind";
-import { FaCopyright, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaCopyright,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 import { pmd, psm, pxl } from "../../utils/components/styles/Footer.ts";
 
@@ -33,6 +39,13 @@ export default function Footer() {
               href="https://twitter.com/ajvanegasv"
             >
               <FaTwitter />
+            </a>
+            <a
+              target="_blank"
+              title="Linkedin"
+              href="https://www.linkedin.com/in/ajvanegasv/"
+            >
+              <FaLinkedin />
             </a>
           </div>
         </div>
