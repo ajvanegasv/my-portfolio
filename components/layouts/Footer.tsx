@@ -1,11 +1,19 @@
 import { tw } from "twind";
-import { FaCopyright, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaCopyright,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
-import { pxl, pmd, psm } from "../../utils/components/styles/Footer.ts";
+import { pmd, psm, pxl } from "../../utils/components/styles/Footer.ts";
 
 export default function Footer() {
   return (
-    <footer class={tw`bg-pallete-secondary-4 text-pallete-primary py-3 sm:flex sm:justify-around sm:flex-wrap px-9 2xl:${pxl} xl:${pmd} md:${psm}`}>
+    <footer
+      class={tw`bg-pallete-secondary-4 text-pallete-primary py-3 sm:flex sm:justify-around sm:flex-wrap px-9 2xl:${pxl} xl:${pmd} md:${psm}`}
+    >
       <div class="flex sm:w-1/2">
         <div>
           <h1 class="font-semibold text-2xl">Alvaro J Vanegas</h1>
@@ -32,6 +40,13 @@ export default function Footer() {
             >
               <FaTwitter />
             </a>
+            <a
+              target="_blank"
+              title="Linkedin"
+              href="https://www.linkedin.com/in/ajvanegasv/"
+            >
+              <FaLinkedin />
+            </a>
           </div>
         </div>
       </div>
@@ -42,13 +57,27 @@ export default function Footer() {
         </div>
         <div class="flex flex-col">
           <h6 className="font-bold">Resources</h6>
-          <a href="https://iconos8.es/icons" target="_blank" class="text-sm hover:underline">
+          <a
+            href="https://iconos8.es/icons"
+            target="_blank"
+            class="text-sm hover:underline"
+          >
             iconos8
           </a>
-          <a href="https://iconduck.com/" target="_blank" class="text-sm hover:underline">
+          <a
+            href="https://iconduck.com/"
+            target="_blank"
+            class="text-sm hover:underline"
+          >
             iconduck
           </a>
-          <a href="https://undraw.co/" target="_blank" class="text-sm hover:underline">unDraw</a>
+          <a
+            href="https://undraw.co/"
+            target="_blank"
+            class="text-sm hover:underline"
+          >
+            unDraw
+          </a>
         </div>
       </div>
       <div class="flex sm:w-full justify-center text-sm items-center gap-2 my-3">
@@ -57,6 +86,16 @@ export default function Footer() {
         </h4>
         <FaCopyright />
         {new Date().getFullYear()}
+      </div>
+      <div class="flex justify-center">
+        <a href="https://fresh.deno.dev">
+          <img
+            width="197"
+            height="37"
+            src="https://fresh.deno.dev/fresh-badge-dark.svg"
+            alt="Made with Fresh"
+          />
+        </a>
       </div>
     </footer>
   );
