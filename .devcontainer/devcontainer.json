@@ -1,19 +1,4 @@
 {
   "name": "Fresh",
-  "dockerFile": "Dockerfile",
-
-  "customizations": {
-    "vscode": {
-      "settings": {},
-      "extensions": [
-        "denoland.vscode-deno",
-        "tal7aouy.icons",
-        "eamodio.gitlens",
-        "jdinhlife.gruvbox",
-        "esbenp.prettier-vscode"
-      ]
-    }
-  },
-
-  "remoteUser": "vscode"
+  "image": "denoland/deno:alpine"
 }
