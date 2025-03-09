@@ -1,4 +1,7 @@
 {
-  "name": "Fresh",
-  "image": "denoland/deno:alpine"
+  "name": "Fresh-portfolio",
+  "build": {
+    context: ".",
+    dockerfile: "Dockerfile"
+  }
 }
