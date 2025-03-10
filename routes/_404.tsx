@@ -1,30 +1,27 @@
-import { asset } from "$fresh/runtime.ts";
-import { css } from "twind/css";
-import { tw } from "twind";
+import { Head } from "$fresh/runtime.ts";
 
-import Footer from "../components/layouts/Footer.tsx";
-import StaticHeader from "../components/layouts/StaticHeader.tsx";
-
-export default function Error404Page() {
+export default function Error404() {
   return (
     <>
-      <StaticHeader />
-      <main class="h-screen bg-pallete-primary p-5 flex items-center">
-        <section class="flex justify-center items-center flex-col gap-9 w-full">
-          <h1 class="text-3xl sm:text-6xl text-center text-pallete-secondary-1 font-bold mb-4">
-          What are you trying to search for?
-          </h1>
+      <Head>
+        <title>404 - Page not found</title>
+      </Head>
+      <div class="px-4 py-8 mx-auto bg-[#86efac]">
+        <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
           <img
-            class={tw`object-contain h-48 w-96 sm:h-60 sm:${css`width: 28rem;`} md:h-80 md:${css`width:32rem;`} lg:h-96 lg:${css`width: 36rem;`} 2xl:${css`height: 28rem; width: 40rem;`}  3xl:${css`height: 32rem; width: 44rem;`}`}
-            src={asset("assets/takenotfound.svg")}
-            alt="Working in progress"
+            class="my-6"
+            src="/logo.svg"
+            width="128"
+            height="128"
+            alt="the Fresh logo: a sliced lemon dripping with juice"
           />
-          <h1 class="text-3xl sm:text-6xl text-center text-pallete-secondary-1 font-bold mb-4">
-          404 Not Found.
-          </h1>
-        </section>
-      </main>
-      <Footer />
+          <h1 class="text-4xl font-bold">404 - Page not found</h1>
+          <p class="my-4">
+            The page you were looking for doesn't exist.
+          </p>
+          <a href="/" class="underline">Go back home</a>
+        </div>
+      </div>
     </>
   );
 }
